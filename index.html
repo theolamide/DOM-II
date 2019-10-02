@@ -26,9 +26,10 @@
         <a class="nav-link" href="#">About Us</a>
         <a class="nav-link" href="#">Blog</a>
         <a class="nav-link" href="#">Contact</a>
-      </nav>
-      <input placeholder="Search" size="15">
+      </nav>      
     </div>
+    <input placeholder="Search" size="15">
+    <p id="errorAlert"></p>
   </header>
      
   <div class="container home">
@@ -56,6 +57,12 @@
         <p>Adventure webdesign pretty design design, excursion cute WordPress blogger design webdesign adventure. Pretty simple traveling fun WordPress wanderlust darn simple organized.</p> 
         <p>Expedition colorful design simple excursion blogger blogger design WordPress design, design organized website theme.</p>
       </div>
+      <div class="dropzone"> 
+        <div id="draggable" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"> 
+          <img id="draggable" src="img/adventure.jpg" alt="Let's go on an adventure!" > 
+        </div> 
+      </div> 
+      <div class="dropzone"></div>      
      
     </section>
     <section class="content-destination">

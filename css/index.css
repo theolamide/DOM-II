@@ -178,8 +178,19 @@ img {
   width: 100%;
   height: 90px;
   background: #FFFFFF;
+  padding-bottom: 1rem;
   border-bottom: 2px dashed #C0C0C0;
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-navigation input {
+  text-align: center;
+  border: 1px solid yellow;
+  border-radius: 10px;
+  width: 50%;
+  height: 60%;
 }
 .main-navigation .nav-container {
   height: 100%;
@@ -292,6 +303,16 @@ img {
   .home .inverse-content .img-content {
     order: 2;
   }
+}
+.home #draggable {
+  border-radius: 10px;
+  width: 97%;
+  padding-left: 0.25%;
+}
+.home .dropzone {
+  border-radius: 10px;
+  width: 50%;
+  padding-left: 0.25%;
 }
 .home .content-destination {
   width: 75%;
