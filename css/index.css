@@ -326,6 +326,21 @@ img {
 .home .content-destination img {
   border-radius: 10px;
 }
+.home #form {
+  display: flex;
+  justify-content: space-around;
+  padding: 2.5rem 0px 2.5rem 0px;
+  border-top: 2px dashed #C0C0C0;
+}
+.home #form input {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 2rem;
+  width: 30%;
+  height: 5rem;
+}
 .home .content-pick {
   padding-top: 30px;
   border-top: 2px dashed #C0C0C0;

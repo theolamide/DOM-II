@@ -1,5 +1,5 @@
 // Your code goes here
-
+//MOUSEOVER, MOUSEENTER, AND MOUSELEAVE
 let headerAction = document.querySelector(".main-navigation");
     headerAction.addEventListener("mouseenter",()=>{
         headerAction.style.backgroundColor = "yellow";
@@ -24,16 +24,14 @@ Array.from(navLink).forEach(item =>{
     })
 })
 
-//DRAG AND DROP
+//KEYDOWN
 
 const input = document.querySelector('input');
-const errorAlert = document.getElementById('errorAlert');
+input.addEventListener('keydown', function (){
+    alert('The search feature is not active yet')
+})
 
-input.addEventListener('keydown', logKey);
-
-function logKey(e){
-    errorAlert.textContent = "The search feature is not active yet"
-}
+//DRAG AND DROP
 
 var dragged;
 
@@ -86,3 +84,67 @@ document.addEventListener("drop", function(event) {
     event.target.appendChild( dragged );
   }
 }, false);
+
+
+//DOUBLE CLICK
+
+const clickThrough = document.querySelector('.intro img');
+clickThrough.addEventListener("dblclick", () => {
+  clickThrough.src= "img/DesertVan.jpg"   
+})
+
+//FOCUS
+const form = document.getElementById('form');
+
+form.addEventListener('focus', (event) => {
+  event.target.style.background = 'yellow';    
+}, true);
+
+form.addEventListener('blur', (event) => {
+  event.target.style.background = '';    
+}, true);
+
+//RESET
+form.addEventListener('reset',() =>{
+
+});
+
+//RESIZE
+const chgHomeBack = document.querySelector(".intro p");
+console.log(chgHomeBack);
+window.addEventListener('resize',() =>{
+    console.log(chgHomeBack.clientWidth);
+    if (chgHomeBack.clientWidth < 800){
+        chgHomeBack.style.background = "red";
+    }
+})
+
+//SCROLL
+window.addEventListener('scroll', () => {
+    document.body.style.backgroundColor="blue";
+  })
+
+
+  //Stop Propagation
+
+  const contentGroup = document.querySelector(".home");
+contentGroup.addEventListener('click', () => {
+  contentGroup.style.backgroundColor="orange";
+});
+const card = document.querySelector(".text-content");
+console.log(card);
+card.addEventListener('click', (event) => {
+  card.style.backgroundColor="green";
+  event.stopPropagation();
+})
+
+//Stop Default
+
+const stopDef = document.querySelector(".nav-link");
+
+stopDef.addEventListener("click", (event) => {
+  console.log("stopped link");
+  
+  event.preventDefault();
+})
+
